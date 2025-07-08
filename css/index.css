@@ -1,0 +1,114 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f6f8d6;
+      color: #333;
+    }
+    header {
+      color: #160505;
+      padding: 1rem;
+      text-align: center;
+    }
+    .hero {
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    .descrizione {
+        color: #fff;
+        padding: 2rem;
+        text-align: center;
+        background-image: url("../icons/Background-image.svg");
+        background-size:100% 100%;
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        background-size:cover;
+    }
+    .subtitle{
+        font-size: 1rem;
+
+      font-weight: bold;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .card {
+      flex: 0 0 auto;
+      width: 300px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      scroll-snap-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .card .card-content {
+      padding: 1rem;
+    }
+    footer {
+      text-align: center;
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    a.whatsapp {
+        display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a.contatti {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #016dfc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .img-centrata {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    }
+
+    .contenitore-imagine {
+    width: 30%;
+    height: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    @font-face {
+    font-family: 'SuperShiny';
+    src: url('../fonts/super-shiny-font/SuperShiny-0v0rG.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    .titolo-shiny {
+    font-family: 'SuperShiny', sans-serif;
+    font-size: 4rem;
+    color: #348F3A; 
+    }
