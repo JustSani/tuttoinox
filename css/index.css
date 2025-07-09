@@ -1,7 +1,7 @@
 body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ebefba;
+      background-color: #fbffcf;
       color: #333;
     }
     header {
@@ -33,8 +33,8 @@ body {
       
       box-sizing: border-box;
       padding: 1rem;
+          background-image: url("../icons/Background-image.svg");
         border-radius: 10px  10px 0px 0px;
-        background-image: url("../icons/Background-image.svg");
         background-size:100% 100%;
         -o-background-size: 100% 100%;
         -webkit-background-size: 100% 100%;
@@ -88,21 +88,19 @@ body {
       margin-top: 2rem;
     }
     a.whatsapp {
-        display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #25D366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+        padding: 0.5rem;
+        background-color: #25D366;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-right: 1rem;
     }
     a.contatti {
-      display: inline-block;
-      padding: 0.5rem 1rem;
+        margin-left: 1rem;
+      padding: 0.5rem;
       background-color: #016dfc;
       color: #fff;
-      text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
     }
@@ -124,17 +122,65 @@ body {
     align-items: center;
     }
     .img-principale{
-      
-      max-width: 20vw;
-      max-height: 20vw;
+      max-width: 34vw;
+      max-height: 34vw;
     }
+    .titolo-shiny {
+      font-family: 'Oswald', sans-serif;
+      font-size: 4rem;
+      color: #1b5e20; 
+      margin-bottom: 0px;
+    }
+    .sottotitolo-shiny {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #1b5e20;
+    }
+    .testo-shiny{
+      color: #1b5e20;
+    }
+    .navbar{
+      display:flex; 
+       justify-content: flex-start;
+    }
+
+    .seconda-vetrina-foto{
+      width: 30vw
+    }
+
     @media (max-width: 767px) {
       .img-principale{
         max-width: 70vw;
         max-height: 70vw;
       }
-      
+      .navbar{
+      display:flex; 
+       justify-content: center;
+      }
+      .hero {
+        color: #fff;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      .seconda-vetrina-foto{
+      width:  70vw
     }
+
+    }
+
+      .vetrina-immagine-contatti{
+      
+      box-sizing: border-box;
+        padding: 1rem;
+        border-radius: 10px  10px 0px 0px;
+        background-color: #2e7d32;
+        background-size:100% 100%;
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+    }
+      
+    
 
     @font-face {
     font-family: 'SuperShiny';
@@ -142,8 +188,4 @@ body {
     font-weight: normal;
     font-style: normal;
     }
-    .titolo-shiny {
-    font-family: 'SuperShiny', sans-serif;
-    font-size: 4rem;
-    color: #348F3A; 
-    }
+    
