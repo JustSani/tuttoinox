@@ -53,6 +53,7 @@ body {
 
       font-weight: bold;
     }
+    
     .carousel {
       display: flex;
       overflow-x: auto;
@@ -148,6 +149,10 @@ body {
       width: 30vw
     }
 
+    .terza-vetrina{
+      padding-right:10vw; padding-left: 10vw;
+    }
+
     @media (max-width: 767px) {
       .img-principale{
         max-width: 70vw;
@@ -164,8 +169,13 @@ body {
         font-weight: bold;
       }
       .seconda-vetrina-foto{
-      width:  70vw
-    }
+        width:  70vw
+      }
+      
+      
+      .card {
+        width: 250px;
+      }
 
     }
 
@@ -189,3 +199,5 @@ body {
     font-style: normal;
     }
     
+
+
