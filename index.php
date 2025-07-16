@@ -7,8 +7,7 @@
     
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/index.js"></script>
@@ -27,8 +26,6 @@
         <h3 class="sottotitolo-shiny " style="margin-left: 2rem;">       di Bruno Sabina</h3>
 
 </header>
-
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -111,6 +108,42 @@
     </center>
     <div class="terza-vetrina " >
       
+      <?php 
+        require_once 'liberia.php';
+
+        $db = new Database('localhost', 'tuttoinox', 'root', '');
+        
+        $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria ASC");
+       # echo("<h1 class='testo-shiny' ><strong>{$cards["Categoria"]}:</strong></h1> " );
+        # inizio carousel
+        
+        echo "<h1 class='testo-shiny' ><strong>{$cards[0]["Categoria"]}:</strong></h1>";
+        echo("<section class='carousel'>");
+        $last_categoria = $cards[0]["Categoria"];
+        foreach ($cards as $card){
+          if($last_categoria != $card["Categoria"]){
+            $last_categoria = $card["Categoria"];
+            echo("</section>");
+            echo "<br><h1 class='testo-shiny' ><strong>{$card["Categoria"]}:</strong></h1>";
+            echo("<section class='carousel'>");
+          }
+
+          echo "<div id='{$card["id"]}' class='card'>";
+            echo "<img  src='{$card["img_principale"]}'>";
+              echo "<div class='card-content'>";
+                echo("<h3>{$card["Titolo"]}</h3>");
+                echo "<p>{$card["Descrizione_Breve"]}</p>";
+              echo "</div>";
+              echo "<center class='card-arrow'><img style='width: 10vw; height: 10vw;' src='icons/right-arrow-svgrepo-com.svg'></center>";
+          echo "</div>";
+        }
+        # chiusura section
+        echo("</section>");
+
+      ?>
+
+
+      <!--
       <h1 class="testo-shiny" ><strong>PER LA CASA:</strong></h1>
       <p class="testo-shiny">Progettazione e reallizzazione di elementi di arredo per la casa e il giardino</p>
       <section class="carousel">
@@ -177,7 +210,9 @@
         </div>
       </section>
 
+      -->
     </div>
+    
 
     
 

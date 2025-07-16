@@ -3,6 +3,11 @@ $(function(){
   // jQuery methods go here...
     $(".card").click(function(){
         $('#exampleModal').modal("show")
+        console.log(this.id)
+        // 'https://sanino.altervista.org/carena/api/getData.php'
+        $.post('api/getData.php', { id: this.id }, function(risposta) {
+          console.log('Risposta:', risposta);
+        });
     })
 
      $(".card").hover(function(){

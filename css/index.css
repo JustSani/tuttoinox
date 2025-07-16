@@ -71,6 +71,18 @@ body {
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       scroll-snap-align: center;
     }
+    .card:hover {
+      flex: 0 0 auto;
+      width: 300px;
+      background-color: #d2cfcf;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      scroll-snap-align: center;
+    }
+    .card-arrow{
+      display: none;
+    }
     .card img {
       width: 100%;
       height: 200px;
@@ -170,6 +182,9 @@ body {
       }
       .seconda-vetrina-foto{
         width:  70vw
+      }
+      .card-arrow{
+        display: block;
       }
       
       
