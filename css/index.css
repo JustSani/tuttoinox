@@ -54,7 +54,7 @@ body {
       font-weight: bold;
     }
     
-    .carousel {
+    .carousel-custom{
       display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
@@ -73,7 +73,6 @@ body {
     }
     .card:hover {
       flex: 0 0 auto;
-      width: 300px;
       background-color: #d2cfcf;
       border: 1px solid #ccc;
       border-radius: 10px;
@@ -99,6 +98,29 @@ body {
       color: #fff;
       padding: 1rem;
       margin-top: 2rem;
+    }
+    .whatsapp-absolute{
+      width: 100%;
+      height: 100%;
+      justify-content: right;
+      position: fixed;  
+      display: flex;
+      z-index:1000;
+      pointer-events: none;
+
+    }
+    .whatsapp-button-absolute{
+      background-image: url("../icons/whatsapp-icon.svg");
+      flex: 0 1 auto;
+      align-self: flex-end;
+      width:10vh;
+      height:10vh;
+      margin-bottom: 5vh;
+      margin-right: 5vh;
+        background-size:100% 100%;
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        pointer-events: auto;
     }
     a.whatsapp {
         padding: 0.5rem;
@@ -190,6 +212,20 @@ body {
       
       .card {
         width: 250px;
+      }
+
+      .whatsapp-button-absolute{
+        background-image: url("../icons/whatsapp-icon.svg");
+        flex: 0 1 auto;
+        align-self: flex-end;
+        width:20vw;
+        height:20vw;
+        margin-bottom: 5vh;
+        margin-right: 5vh;
+          background-size:100% 100%;
+          -o-background-size: 100% 100%;
+          -webkit-background-size: 100% 100%;
+          pointer-events: auto;
       }
 
     }

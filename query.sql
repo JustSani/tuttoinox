@@ -15,3 +15,10 @@ CREATE TABLE TUTTOINOX(
 
 INSERT INTO tuttoinox (Categoria, Titolo, Descrizione_Breve,img_principale, img1,img2, Secondo_Titolo, Descrizione_Lunga)
 VALUES ("PER LA CASA", "Tavolo da esterno e sedie","Realizzazione su misura di un tavolo da esterno con sedie", "img/08.jpg", "img/09.jpg", "img/08.jpg", "Tavolo da esterno e sedie", "Tavolo da esterno e sedie Tavolo da esterno e sedieTavolo da esterno e sedie Tavolo da esterno e sedie Tavolo da esterno e sedieTavolo da esterno e sedie")
+
+
+
+INSERT INTO tuttoinox (Categoria, Titolo, Descrizione_Breve, Secondo_Titolo, Descrizione_Lunga)
+VALUES ("PER LA CASA", "Tavolo da esterno e sedie","Realizzazione su misura di un tavolo da esterno con sedie",  "Tavolo da esterno e sedie", "Tavolo da esterno e sedie Tavolo da esterno e sedieTavolo da esterno e sedie Tavolo da esterno e sedie Tavolo da esterno e sedieTavolo da esterno e sedie"),
+("cacca popo", "oidfndifnd"),
+("")

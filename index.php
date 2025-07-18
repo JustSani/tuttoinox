@@ -3,11 +3,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title >OFFICINA SALDATURE</title>
-  
-    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/index.js"></script>
@@ -16,9 +15,14 @@
 <link href="https://fonts.googleapis.com/css2?family=UoqMunThenKhung&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/index.css">
+
+
 </head>
 <body>
-  
+<div class="whatsapp-absolute">
+  <a href="https://wa.me/3334714990" class="whatsapp-button-absolute" id="btn-whatsapp-fixed"></a>
+
+</div>
 
 <header class=" align-items-end navbar" style="border-bottom:solid #205824 2px;">
         <h1 class="titolo-shiny">TUTTOINOX</h1>
@@ -31,22 +35,45 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content align-items-center">
       <div class="modal-header">
-        <h2 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #205824; font-family: 'UoqMunThenKhung';">CARRELLI SU MISURA</h2>
+        <h2 class="modal-title" id="modal-title" style="font-weight: bold; color: #205824; font-family: 'UoqMunThenKhung';">CARRELLI SU MISURA</h2>
         
       </div>
-      <div class="modal-body" style="display: inline;">
-          <center>
-          <img style="width: 45%; border-radius: 10px 0px 0px 10px; " src="img/02.jpg">
-          <img style="width: 45%; border-radius: 0px 10px 10px 0px; " src="img/03.jpg">
+      <div class="modal-body" >
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/02.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/02.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/03.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           <br><br>
-          <h3><b>Progettazione e reallizzazione di carreli</b></h3>
-          </center>
-          <p>Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.</p>
+          <h3 id="modal-secondo-titolo"><b>Progettazione e reallizzazione di carreli</b></h3>
+          
+          <p id="modal-descrizione-lunga">Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.</p>
 
       </div>
       <div class="modal-footer">
         
-          <a href="#contatti" class="contatti">Contattaci per preventivo</a>
+          <a href="#contatti" id="btn-modal-contatti" class="contatti">Contattaci per preventivo</a>
 
       </div>
     </div>
@@ -118,14 +145,14 @@
         # inizio carousel
         
         echo "<h1 class='testo-shiny' ><strong>{$cards[0]["Categoria"]}:</strong></h1>";
-        echo("<section class='carousel'>");
+        echo("<section class='carousel-custom'>");
         $last_categoria = $cards[0]["Categoria"];
         foreach ($cards as $card){
           if($last_categoria != $card["Categoria"]){
             $last_categoria = $card["Categoria"];
             echo("</section>");
             echo "<br><h1 class='testo-shiny' ><strong>{$card["Categoria"]}:</strong></h1>";
-            echo("<section class='carousel'>");
+            echo("<section class='carousel-custom'>");
           }
 
           echo "<div id='{$card["id"]}' class='card'>";
