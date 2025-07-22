@@ -34,8 +34,9 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content align-items-center">
+        <p class="w-100 text-end">X</p>
       <div class="modal-header">
-        <h2 class="modal-title" id="modal-title" style="font-weight: bold; color: #205824; font-family: 'UoqMunThenKhung';">CARRELLI SU MISURA</h2>
+        <h2 class="modal-title" id="modal-title" style="font-weight: bold; color: #205824; font-family: 'UoqMunThenKhung'; text-align: center;">CARRELLI SU MISURA</h2>
         
       </div>
       <div class="modal-body" >
@@ -112,9 +113,21 @@
   <section class="bg-white">
     <br>
     <center>
-      <div class="" style="width: 80%;">
+      <div class="" style="width: 80%;  background-image: url('icons/boulder.png'); 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      background-size: cover; 
+  opacity: 0.5;">
       <hr>
-      <h1 class="sottotitolo-shiny" style="text-align: left; text-decoration: underline;">TUTTOINOX</h1>
+      <h1 class="sottotitolo-shiny" style="text-align: center; text-decoration: underline;">CHI SIAMO</h1>
+      <p class="testo-shiny "  style="text-align: center; opacity: 1;">
+            <b>
+            Siamo un’ officina artigiana a conduzione familiare: mamma Sabina, papà Alberto e il figlio Andrea. Nasciamo come specialisti nella lavorazione dell’acciaio inox, ma realizziamo anche strutture e lavorazioni in ferro zincato e acciaio, sempre su misura.
+            Per noi ogni cliente è un amico. Amiamo ascoltare le tue idee e trasformarle in realtà con passione e cura. Il nostro lavoro non si basa sui numeri, ma sulla precisione, sui dettagli e sulla qualità del risultato finale.
+            Siamo particolarmente appassionati dei pezzi su misura: Alberto è un vero specialista nel progettare e creare soluzioni personalizzate per impianti zootecnici, arredi inox e attrezzature agricole. Lavoriamo al tuo fianco perché tu possa fidarti e affidarti alla nostra esperienza artigiana.
+            </b></p>
+        <br><br>
+      <!--h1 class="sottotitolo-shiny" style="text-align: left; text-decoration: underline;">TUTTOINOX</h1>
         <div class="row justify-content-center">
           <div class="col-md-6">
             <p class="testo-shiny "  style="text-align: left;">
@@ -130,7 +143,7 @@
         </div>
         <br>
         <hr>
-      </div>
+      </div-->
     
     </center>
     <div class="terza-vetrina " >
