@@ -24,7 +24,7 @@
 
 </div>
 
-<header class=" align-items-end navbar" style="border-bottom:solid #205824 2px;">
+<header class=" align-items-end navbar  " style="border-bottom:solid #205824 2px;">
         <h1 class="titolo-shiny">TUTTOINOX</h1>
 
         <h3 class="sottotitolo-shiny " style="margin-left: 2rem;">       di Bruno Sabina</h3>
@@ -86,11 +86,11 @@
   <section class="sezione">
     <div class="descrizione ">
         <div class="row align-items-center vetrina-immagine-contatti">
-          <!-- Immagine a sinistra -->
+          
           <div class="col-md-4 mb-3 mb-md-0 contenitore-immagine">
               <img src="img/vetrina-foto.jpeg" alt="Immagine di esempio" class="img-principale rounded">
           </div>
-          <!-- Testo a destra -->
+
           <div class="col-md-8 justify-content-center">
               <h1 class="hero">“Ti ta pensi, mi ta fass.<br> Appena poss..”</h1>
               <subtitle style="font-style: italic; color:rgba(255, 255, 255, 0.8)">"Tu la pensi, io la faccio. Appena posso.."</subtitle>
@@ -107,17 +107,13 @@
         </div>
     </div>
         
-    
   </section>
+
   <br>
   <section class="bg-white">
     <br>
     <center>
-      <div class="" style="width: 80%;  background-image: url('icons/boulder.png'); 
-      background-position: center; 
-      background-repeat: no-repeat; 
-      background-size: cover; 
-  opacity: 0.5;">
+      <div class="" style="width: 80%;">
       <hr>
       <h1 class="sottotitolo-shiny" style="text-align: center; text-decoration: underline;">CHI SIAMO</h1>
       <p class="testo-shiny "  style="text-align: center; opacity: 1;">
@@ -126,7 +122,9 @@
             Per noi ogni cliente è un amico. Amiamo ascoltare le tue idee e trasformarle in realtà con passione e cura. Il nostro lavoro non si basa sui numeri, ma sulla precisione, sui dettagli e sulla qualità del risultato finale.
             Siamo particolarmente appassionati dei pezzi su misura: Alberto è un vero specialista nel progettare e creare soluzioni personalizzate per impianti zootecnici, arredi inox e attrezzature agricole. Lavoriamo al tuo fianco perché tu possa fidarti e affidarti alla nostra esperienza artigiana.
             </b></p>
-        <br><br>
+        
+        <hr>
+        <br>
       <!--h1 class="sottotitolo-shiny" style="text-align: left; text-decoration: underline;">TUTTOINOX</h1>
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -153,7 +151,7 @@
 
         $db = new Database('localhost', 'tuttoinox', 'root', '');
         
-        $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria ASC");
+        $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria DESC");
        # echo("<h1 class='testo-shiny' ><strong>{$cards["Categoria"]}:</strong></h1> " );
         # inizio carousel
         
@@ -168,13 +166,13 @@
             echo("<section class='carousel-custom'>");
           }
 
-          echo "<div id='{$card["id"]}' class='card'>";
+          echo "<div id='{$card["id"]}' class='card shadow-lg '>";
             echo "<img  src='{$card["img_principale"]}'>";
               echo "<div class='card-content'>";
                 echo("<h3>{$card["Titolo"]}</h3>");
                 echo "<p>{$card["Descrizione_Breve"]}</p>";
               echo "</div>";
-              echo "<center class='card-arrow'><img style='width: 10vw; height: 10vw;' src='icons/right-arrow-svgrepo-com.svg'></center>";
+              #echo "<center class='card-arrow'><img style='width: 10vw; height: 10vw;' src='icons/right-arrow-svgrepo-com.svg'></center>";
           echo "</div>";
         }
         # chiusura section
@@ -252,9 +250,9 @@
 
       -->
     </div>
+    <br>
     
-
-    
+  </section>
 
   <footer id="contatti">
     <h2>Contatti</h2>
@@ -262,8 +260,6 @@
     <p>Telefono: +39 333 6548623</p>
     <p>Indirizzo: Via Guglielmo Marconi 34 - Cervere</p>
   </footer>
-  </section>
-  <br>
 
   
   
