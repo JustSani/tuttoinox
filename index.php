@@ -3,8 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title >OFFICINA SALDATURE</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -19,17 +19,51 @@
 
 </head>
 <body>
+
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" >
+  <div class="container-fluid">
+    <h1 class="titolo-shiny mb-0">TUTTOINOX</h1>
+    <h3 class="sottotitolo-shiny mb-0 d-none d-md-block d-lg-block" style="margin-left: 2rem;">di Bruno Sabina</h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#vetrina-prodotti">Prodotti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Contatti</a>
+        </li>
+      </ul> 
+    </div>
+  </div>
+</nav>
+<!--header class="navbar position-fixed d-flex align-items-center" >
+  <div class="d-flex flex-row align-items-center">
+    <h1 class="titolo-shiny mb-0">TUTTOINOX</h1>
+    <h3 class="sottotitolo-shiny mb-0" style="margin-left: 2rem;">di Bruno Sabina</h3>
+  </div>
+  <div class="d-flex flex-row align-items-left m-100">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="btn btn-primary" id="btn-modal" data-toggle="modal" data-target="#exampleModal">Contattaci</button>
+  </div>
+</header-->
+
+
+
+
 <div class="whatsapp-absolute">
   <a href="https://wa.me/3334714990" class="whatsapp-button-absolute" id="btn-whatsapp-fixed"></a>
 
 </div>
-
-<header class=" align-items-end navbar  " style="border-bottom:solid #205824 2px;">
-        <h1 class="titolo-shiny">TUTTOINOX</h1>
-
-        <h3 class="sottotitolo-shiny " style="margin-left: 2rem;">       di Bruno Sabina</h3>
-
-</header>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -83,7 +117,7 @@
   
   
 
-  <section class="sezione">
+  <section class="sezione" style="margin-top: 17vh;">
     <div class="descrizione ">
         <div class="row align-items-center vetrina-immagine-contatti">
           
@@ -144,28 +178,29 @@
       </div-->
     
     </center>
-    <div class="terza-vetrina " >
+    <div class="terza-vetrina" id="vetrina-prodotti" >
       
       <?php 
         require_once 'liberia.php';
 
-        $db = new Database('localhost', 'tuttoinox', 'root', '');
+        $db = new Database('localhost', 'my_sanino', 'root', '');
         
         $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria DESC");
        # echo("<h1 class='testo-shiny' ><strong>{$cards["Categoria"]}:</strong></h1> " );
         # inizio carousel
-        
-        echo "<h1 class='testo-shiny' ><strong>{$cards[0]["Categoria"]}:</strong></h1>";
-        echo("<section class='carousel-custom'>");
+
+        echo "<h1 class='sottotitolo-shiny'>".strtoupper($cards[0]["Categoria"]).":</h1>";
+        echo("<section class='carousel-custom p-3'>");
         $last_categoria = $cards[0]["Categoria"];
         foreach ($cards as $card){
           if($last_categoria != $card["Categoria"]){
             $last_categoria = $card["Categoria"];
             echo("</section>");
-            echo "<br><h1 class='testo-shiny' ><strong>{$card["Categoria"]}:</strong></h1>";
-            echo("<section class='carousel-custom'>");
+            echo "<br><h1 class='sottotitolo-shiny'>".strtoupper($card["Categoria"]).":</h1>";
+            echo("<section class='carousel-custom p-3'>");
           }
 
+          echo "<div class='p-2 '>";
           echo "<div id='{$card["id"]}' class='card shadow-lg '>";
             echo "<img  src='{$card["img_principale"]}'>";
               echo "<div class='card-content'>";
@@ -173,6 +208,7 @@
                 echo "<p>{$card["Descrizione_Breve"]}</p>";
               echo "</div>";
               #echo "<center class='card-arrow'><img style='width: 10vw; height: 10vw;' src='icons/right-arrow-svgrepo-com.svg'></center>";
+          echo "</div>";
           echo "</div>";
         }
         # chiusura section

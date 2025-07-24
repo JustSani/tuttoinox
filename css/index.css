@@ -4,11 +4,43 @@ body {
       background-color: #fbffcf;
       color: #333;
     }
-    header {
-      color: #160505;
+    .navbar{
       padding: 1rem;
+      background-color: #fbffcf  !important;
+      border-bottom:solid #205824 2px;
+      /*position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1001; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+      color: #160505;
       text-align: center;
+      z-index: 1000;
+      background-color: #fbffcf;
+      border-bottom:solid #205824 2px;
+      
+      width: 100%;
+      height:13vh */
     }
+    .nav-link{
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #1b5e20;
+    }
+    .nav-link:hover{
+      font-family: 'Oswald', sans-serif;
+      font-size: 2rem;
+      color: #1b5e20;
+      border-bottom:solid #205824 2px;
+
+    }
+    /*.nav-item{
+      background-color: #e6f7e6;
+      margin-left:2rem;
+      border-radius: 10px 10px 10px 10px;
+    }*/
+
     .hero {
       color: #fff;
       text-align: center;
@@ -68,7 +100,7 @@ body {
       background-color: #fff;
       border: 1px solid #ccc;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.3);
       scroll-snap-align: center;
     }
     .card:hover {
@@ -100,7 +132,7 @@ body {
     }
     .whatsapp-absolute{
       width: 100%;
-      height: 100%;
+      height: 80vh;
       justify-content: right;
       position: fixed;  
       display: flex;
@@ -173,11 +205,7 @@ body {
     .testo-shiny{
       color: #1b5e20;
     }
-    .navbar{
-      display:flex; 
-       justify-content: flex-start;
-    }
-
+    
     .seconda-vetrina-foto{
       width: 30vw
     }
@@ -207,6 +235,12 @@ body {
       .card-arrow{
         display: block;
       }
+      /*.sottotitolo-shiny {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        color: #1b5e20;
+        display: none;
+      }*/
       
       
       .card {

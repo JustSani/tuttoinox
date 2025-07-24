@@ -1,10 +1,10 @@
 HOME PAGE
-- Shadow delle cards
-- header dinamico che si muove con lo scroll, bottone contattaci
+X Shadow delle cards 
+X header dinamico che si muove con lo scroll, bottone contattaci
+X pulsanti in navbar con ancore, prodotti e contatti(pagina)
 - WhatsApp button che si stoppa prima del footer
 - mettere logo vicino a nome
 - rimuovere tasto whatsappaci
-- pulsanti in navbar con ancore, prodotti e contatti(pagina)
 
 CONTATTI
 - nuova pagina per i contatti
