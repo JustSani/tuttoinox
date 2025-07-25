@@ -6,7 +6,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/index.js"></script>
@@ -16,11 +17,10 @@
 
 <link rel="stylesheet" href="css/index.css">
 
-
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" >
+<nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary margin-bottom: 1rem;" >
   <div class="container-fluid">
     <h1 class="titolo-shiny mb-0">TUTTOINOX</h1>
     <h3 class="sottotitolo-shiny mb-0 d-none d-md-block d-lg-block" style="margin-left: 2rem;">di Bruno Sabina</h3>
@@ -33,29 +33,12 @@
           <a class="nav-link " aria-current="page" href="#vetrina-prodotti">Prodotti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Contatti</a>
+          <a class="nav-link " href="contatti.html">Contatti</a>
         </li>
       </ul> 
     </div>
   </div>
 </nav>
-<!--header class="navbar position-fixed d-flex align-items-center" >
-  <div class="d-flex flex-row align-items-center">
-    <h1 class="titolo-shiny mb-0">TUTTOINOX</h1>
-    <h3 class="sottotitolo-shiny mb-0" style="margin-left: 2rem;">di Bruno Sabina</h3>
-  </div>
-  <div class="d-flex flex-row align-items-left m-100">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-      </ul>
-    </div>
-
-    <button class="btn btn-primary" id="btn-modal" data-toggle="modal" data-target="#exampleModal">Contattaci</button>
-  </div>
-</header-->
 
 
 
@@ -68,42 +51,47 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content align-items-center">
-        <p class="w-100 text-end">X</p>
+        <button type="button" class="btn-close position-absolute end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="modal-header">
-        <h2 class="modal-title" id="modal-title" style="font-weight: bold; color: #205824; font-family: 'UoqMunThenKhung'; text-align: center;">CARRELLI SU MISURA</h2>
-        
+        <center><h2 class="modal-title sottotitolo-shiny text-align-center" id="modal-title" >CARRELLI SU MISURA</h2></center>
       </div>
       <div class="modal-body" >
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/02.jpg" class="d-block w-100" alt="...">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                  <img src="img/02.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/02.jpg" class="d-block w-100" alt="Carrello 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/02.jpg" class="d-block w-100" alt="Carrello 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/03.jpg" class="d-block w-100" alt="Carrello 3">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="img/03.jpg" class="d-block w-100" alt="...">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
             </div>
+            <div class="col-md-6">
+              <h5 id="modal-secondo-titolo " class="font-weight-bold">Progettazione e reallizzazione di carreli</h5>
+              <p id="modal-descrizione-lunga">Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.</p>
+            </div>
+          </div>
+            
           <br><br>
-          <h3 id="modal-secondo-titolo"><b>Progettazione e reallizzazione di carreli</b></h3>
-          
-          <p id="modal-descrizione-lunga">Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.Questi carrelli sono dei carrelli.</p>
 
       </div>
       <div class="modal-footer">
@@ -117,7 +105,7 @@
   
   
 
-  <section class="sezione" style="margin-top: 17vh;">
+  <section class="sezione" >
     <div class="descrizione ">
         <div class="row align-items-center vetrina-immagine-contatti">
           
@@ -130,8 +118,8 @@
               <subtitle style="font-style: italic; color:rgba(255, 255, 255, 0.8)">"Tu la pensi, io la faccio. Appena posso.."</subtitle>
               <br><br>
               <div class=" justify-content-center" style="display: flex;">
-                <a href="https://wa.me/3334714990" class="whatsapp ">Whatsappaci</a>
-                <p class="" >o</p>
+                <!--a href="https://wa.me/3334714990" class="whatsapp ">Whatsappaci</a>
+                <p class="" >o</p-->
                 <a href="#contatti" class="contatti mt-b">Contattaci</a>
               </div>
           </div>
@@ -183,7 +171,7 @@
       <?php 
         require_once 'liberia.php';
 
-        $db = new Database('localhost', 'my_sanino', 'root', '');
+        $db = new Database('localhost', 'tuttoinox', 'root', '');
         
         $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria DESC");
        # echo("<h1 class='testo-shiny' ><strong>{$cards["Categoria"]}:</strong></h1> " );
@@ -290,13 +278,23 @@
     
   </section>
 
-  <footer id="contatti">
-    <h2>Contatti</h2>
-    <p>Email: tuttoinox.impianti@gmail.com</p>
-    <p>Telefono: +39 333 6548623</p>
-    <p>Indirizzo: Via Guglielmo Marconi 34 - Cervere</p>
+  <footer id="contatti" class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h2 class="mb-3">Contatti</h2>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-envelope"></i> Email: <a href="mailto:tuttoinox.impianti@gmail.com" class="text-light">tuttoinox.impianti@gmail.com</a></li>
+            <li><i class="bi bi-telephone"></i> Telefono: <a href="tel:+393336548623" class="text-light">+39 333 6548623</a></li>
+            <li><i class="bi bi-geo-alt"></i> Indirizzo: Via Guglielmo Marconi 34 - Cervere</li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <span class="small">&copy; 2025 Tuttoinox. Tutti i diritti riservati.</span>
+        </div>
+      </div>
+    </div>
   </footer>
-
   
   
 

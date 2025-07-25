@@ -3,7 +3,16 @@ body {
       font-family: Arial, sans-serif;
       background-color: #fbffcf;
       color: #333;
+        padding-top: 12vh;
     }
+
+    @media (min-width: 950px) {
+      body{
+        padding-top: 18vh;
+      }
+      
+    }
+
     .navbar{
       padding: 1rem;
       background-color: #fbffcf  !important;
@@ -214,7 +223,10 @@ body {
       padding-right:10vw; padding-left: 10vw;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 950px) {
+      .body{
+        padding-top: 5vh;
+      }
       .img-principale{
         max-width: 70vw;
         max-height: 70vw;

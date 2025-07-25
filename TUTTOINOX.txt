@@ -4,12 +4,13 @@ X header dinamico che si muove con lo scroll, bottone contattaci
 X pulsanti in navbar con ancore, prodotti e contatti(pagina)
 - WhatsApp button che si stoppa prima del footer
 - mettere logo vicino a nome
-- rimuovere tasto whatsappaci
+X rimuovere tasto whatsappaci
 
 CONTATTI
-- nuova pagina per i contatti
+X nuova pagina per i contatti
 - mappa google maps per pagina CONTANTI
 
 MODALS
-- font modals titolo, 
-- modal immagine a fianco dell testo
+X font modals titolo, 
+X modal immagine a fianco dell testo
+- fix del modal
