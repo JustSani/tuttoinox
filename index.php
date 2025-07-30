@@ -43,10 +43,9 @@
 
 
 
-<div class="whatsapp-absolute">
-  <a href="https://wa.me/3334714990" class="whatsapp-button-absolute" id="btn-whatsapp-fixed"></a>
+<div href="https://wa.me/3334714990" class="whatsapp-button-absolute" id="btn-whatsapp-fixed"></div>
 
-</div>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -64,8 +63,8 @@
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
+                <div class="carousel-inner" id="carousel-inner">
+                  <!--div class="carousel-item active">
                     <img src="img/02.jpg" class="d-block w-100" alt="Carrello 1">
                   </div>
                   <div class="carousel-item">
@@ -73,7 +72,7 @@
                   </div>
                   <div class="carousel-item">
                     <img src="img/03.jpg" class="d-block w-100" alt="Carrello 3">
-                  </div>
+                  </div-->
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -96,7 +95,7 @@
       </div>
       <div class="modal-footer">
         
-          <a href="#contatti" id="btn-modal-contatti" class="contatti">Contattaci per preventivo</a>
+          <a href="contatti.html" id="btn-modal-contatti" class="contatti">Contattaci per preventivo</a>
 
       </div>
     </div>
@@ -171,7 +170,7 @@
       <?php 
         require_once 'liberia.php';
 
-        $db = new Database('localhost', 'tuttoinox', 'root', '');
+        $db = new Database('localhost', 'my_sanino', 'root', '');
         
         $cards = $db->fetchAll("SELECT * FROM tuttoinox ORDER BY Categoria DESC");
        # echo("<h1 class='testo-shiny' ><strong>{$cards["Categoria"]}:</strong></h1> " );
@@ -204,81 +203,12 @@
 
       ?>
 
-
-      <!--
-      <h1 class="testo-shiny" ><strong>PER LA CASA:</strong></h1>
-      <p class="testo-shiny">Progettazione e reallizzazione di elementi di arredo per la casa e il giardino</p>
-      <section class="carousel">
-        <div class="card">
-          <img id="casa-1" src="img/08.jpg" alt="Macchina Agricola 2">
-          <div class="card-content">
-            <h3>Tavolo da esterno e sedie</h3>
-            <p>Realizzazione su misura di un tavolo da esterno con sedie
-            </p>
-          </div>
-          <center class="card-arrow">
-              <img style="width: 10vw; height: 10vw;" src="icons/right-arrow-svgrepo-com.svg">
-          </center>
-          <br>
-        </div>
-        <div class="card">
-          <img id="casa-2" src="img/24.jpg" alt="Macchina Agricola 3">
-          <div class="card-content">
-            <h3>Grate per finestra</h3>
-            <p>Realizzazione su misura di una grata per finestra.</p>
-          </div>
-        </div>
-        <div class="card" id="card-1">
-          <img id="casa-3" src="img/26.jpg" alt="Macchina Agricola 1">
-          <div class="card-content" >
-            <h3>Cancello</h3>
-            <p>Realizzazione su misura di un cancello.</p>
-          </div>
-        </div>
-        
-      </section>
-      <br>
-
-      <h1 class="testo-shiny " ><strong> Impianti zootecnici:</strong></h1>
-      <p class="testo-shiny">Progettazione e reallizzazione di soluzioni per impianti zootecnici</p>
-      <section class="carousel">
-        <div id="zoo-1" class="card" >
-          <img src="img/18.jpg" alt="Macchina Agricola 1">
-          <div class="card-content" >
-            <h3>Impianto zootecnico modulare</h3>
-            <p>Struttura facilmente espandibile e resistente per ambienti agricoli</p>
-          </div>
-        </div>
-        <div id="zoo-2" class="card">
-          <img src="img/23.jpg" alt="Macchina Agricola 2">
-          <div class="card-content">
-            <h3>Mangiatoglie per impianto zootecnico</h3>
-            <p>Struttura facilmente espandibile e resistente per ambienti agricoli.</p>
-          </div>
-        </div>
-        <div id="zoo-3" class="card">
-          <img src="img/04.jpg" alt="Macchina Agricola 3">
-          <div class="card-content">
-            <h3>Ascensore trasportatore</h3>
-            <p>Un ascensore credo</p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/06.jpg" alt="Macchina Agricola 3">
-          <div class="card-content">
-            <h3>Cancello per impianto zootecnico</h3>
-            <p>Cancello modulare su misura</p>
-          </div>
-        </div>
-      </section>
-
-      -->
     </div>
     <br>
     
   </section>
 
-  <footer id="contatti" class="bg-dark text-light py-4 mt-5">
+  <footer id="footer" class="bg-dark text-light py-4">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-3 mb-md-0">

@@ -10,7 +10,7 @@ $id = $_POST['id'] ?? 'Sconosciuto';
 
 require_once '../liberia.php';
 
-$db = new Database('localhost', 'tuttoinox', 'root', '');
+$db = new Database('localhost', 'my_sanino', 'root', '');
 
 
 $card = $db->fetchOne("SELECT * FROM tuttoinox WHERE id = ?", [$id]);

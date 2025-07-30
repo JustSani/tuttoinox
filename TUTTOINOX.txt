@@ -2,15 +2,15 @@ HOME PAGE
 X Shadow delle cards 
 X header dinamico che si muove con lo scroll, bottone contattaci
 X pulsanti in navbar con ancore, prodotti e contatti(pagina)
-- WhatsApp button che si stoppa prima del footer
+X WhatsApp button che si stoppa prima del footer
 - mettere logo vicino a nome
 X rimuovere tasto whatsappaci
 
 CONTATTI
 X nuova pagina per i contatti
-- mappa google maps per pagina CONTANTI
+X mappa google maps per pagina CONTANTI
 
 MODALS
 X font modals titolo, 
 X modal immagine a fianco dell testo
-- fix del modal
+x fix del modal
